@@ -591,13 +591,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3914193512451503970}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3224065443768189056}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.25}
@@ -916,7 +916,6 @@ MonoBehaviour:
   shootingPoint: {fileID: 5208451466820853011}
   hitEffectPrefab: {fileID: 1828176872806910, guid: f243353a88ede53438a0da63b3c3ab1e, type: 3}
   survivors: 0
-  survivorsCap: 0
   survivorsText: {fileID: 0}
   winText: {fileID: 0}
   deathEffectPrefab: {fileID: 1121192042590650, guid: 03853d29fa00c104e8547179ba8efdbd, type: 3}
