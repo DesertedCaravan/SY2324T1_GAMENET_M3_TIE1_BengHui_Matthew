@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
+using UnityEngine.SceneManagement;
 
-public class DeathRaceGameManager : MonoBehaviour
+public class DeathRaceGameManager : MonoBehaviourPunCallbacks
 {
     [Header("Death Race Mode")]
-    [SerializeField] public Image healthBar;
+    [SerializeField] public GameObject healthBar;
     [SerializeField] public GameObject killFeedTextParent;
     [SerializeField] private GameObject killFeedTextPrefab;
     [SerializeField] public TextMeshProUGUI survivorsText;
     [SerializeField] public TextMeshProUGUI winText;
+
+    [Header("Quit Game")]
+    public GameObject quitGameButton;
 
     // Convert to Singleton
     public static DeathRaceGameManager instance = null;
@@ -30,6 +35,11 @@ public class DeathRaceGameManager : MonoBehaviour
         // DontDestroyOnLoad(gameObject); // Makes it a persistent GameObject
     }
 
+    void Start()
+    {
+        quitGameButton.SetActive(false);
+    }
+
     public void AddKillFeed(string attacker, string target)
     {
         GameObject killFeedItem = Instantiate(killFeedTextPrefab);
@@ -39,5 +49,23 @@ public class DeathRaceGameManager : MonoBehaviour
         killFeedItem.GetComponent<TextMeshProUGUI>().text = attacker + " has killed " + target;
 
         Destroy(killFeedItem, 5.0f);
+    }
+
+    public void DisplayQuitButton()
+    {
+        quitGameButton.SetActive(true);
+    }
+
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
+
+    public void LeaveRoom()
+    {
+        quitGameButton.SetActive(false);
+        winText.text = "";
+
+        PhotonNetwork.LeaveRoom();
     }
 }

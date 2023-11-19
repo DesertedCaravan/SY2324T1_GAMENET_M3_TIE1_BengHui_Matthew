@@ -128,9 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  playerNameText: {fileID: 8031138023283610671}
-  healthBarBackground: {fileID: 1718579315667463169}
-  healthBarImage: {fileID: 7524947289702703686}
+  playerNameText: {fileID: 4058488555017321324}
+  healthBarBackground: {fileID: 5330829135142587990}
+  healthBarImage: {fileID: 2125802938293266079}
 --- !u!114 &-2711687122337171212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   healthBar: {fileID: 0}
-  displayedHealthBar: {fileID: 7524947289702703686}
+  displayedHealthBar: {fileID: 2125802938293266079}
   bullet: {fileID: 1699677810221209327, guid: 86309ac436398ed459d428c3c373a6eb, type: 3}
   bulletSpeed: 0
   fireRate: 0.1

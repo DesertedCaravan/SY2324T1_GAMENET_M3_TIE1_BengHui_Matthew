@@ -506,11 +506,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f30599db6392448a4214d1716bdd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 937724371}
+  healthBar: {fileID: 937724369}
   killFeedTextParent: {fileID: 1614605178}
   killFeedTextPrefab: {fileID: 5490366640203784044, guid: 93474a4dfcb79984b89086712671ad64, type: 3}
   survivorsText: {fileID: 695811703}
   winText: {fileID: 1308224674}
+  quitGameButton: {fileID: 1679561978}
 --- !u!1 &642480949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,8 +1791,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 578566026}
-        m_TargetAssemblyTypeName: RacingGameManager, Assembly-CSharp
+      - m_Target: {fileID: 578566027}
+        m_TargetAssemblyTypeName: DeathRaceGameManager, Assembly-CSharp
         m_MethodName: LeaveRoom
         m_Mode: 1
         m_Arguments:

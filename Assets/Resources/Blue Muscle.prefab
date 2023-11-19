@@ -420,9 +420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  playerNameText: {fileID: 4563613014481856225}
-  healthBarBackground: {fileID: 998073749617859857}
-  healthBarImage: {fileID: 1033879646486320142}
+  playerNameText: {fileID: 6175681222125084080}
+  healthBarBackground: {fileID: 7633947703149763411}
+  healthBarImage: {fileID: 431361156284472845}
 --- !u!114 &-7022319539529868903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   healthBar: {fileID: 0}
-  displayedHealthBar: {fileID: 1033879646486320142}
+  displayedHealthBar: {fileID: 431361156284472845}
   bullet: {fileID: 1699677810221209327, guid: 86309ac436398ed459d428c3c373a6eb, type: 3}
   bulletSpeed: 0
   fireRate: 0.1
@@ -533,6 +533,7 @@ MonoBehaviour:
   survivorsText: {fileID: 0}
   winText: {fileID: 0}
   deathEffectPrefab: {fileID: 1121192042590650, guid: 03853d29fa00c104e8547179ba8efdbd, type: 3}
+  alive: 0
 --- !u!1 &5339104112009653455
 GameObject:
   m_ObjectHideFlags: 0

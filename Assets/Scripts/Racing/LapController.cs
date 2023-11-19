@@ -112,10 +112,16 @@ public class LapController : MonoBehaviourPunCallbacks
 
         PhotonNetwork.RaiseEvent((byte) RaiseEventsCode.WhoFinishedEventCode, data, raiseEventOptions, sendOptions);
 
-        if (data.Length == PhotonNetwork.CurrentRoom.PlayerCount)
+        // data.Length is 3
+        if (finishOrder >= PhotonNetwork.CurrentRoom.PlayerCount)
         {
-            RacingGameManager.instance.DisplayQuitButton();
+            photonView.RPC("DisplayQuitButton", RpcTarget.AllBuffered);
         }
     }
 
+    [PunRPC]
+    public void DisplayQuitButton()
+    {
+        RacingGameManager.instance.DisplayQuitButton();
+    }
 }

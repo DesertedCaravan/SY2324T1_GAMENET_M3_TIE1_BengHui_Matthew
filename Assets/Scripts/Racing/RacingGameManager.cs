@@ -75,6 +75,7 @@ public class RacingGameManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
+        quitGameButton.SetActive(false);
         PhotonNetwork.LeaveRoom();
     }
 
